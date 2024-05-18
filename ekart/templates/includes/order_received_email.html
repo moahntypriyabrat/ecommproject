@@ -1,0 +1,13 @@
+{% autoescape off %}
+# test_mail
+Hi {{user.first_name}},
+
+
+You have ordered The following items.
+{% for item in ordered_product %}
+{{item.product.product_name}}
+{% endfor %}
+
+Your Order with Order Number {{order.order_number}} has been received.
+Thank You for Shopping with us!
+{% endautoescape %}
